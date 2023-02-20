@@ -1,9 +1,9 @@
 import styled from "styled-components";
 const Container = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 200px;
-  height: 300px;
+  flex-direction: row;
+
+  height: 150px;
   margin: 10px;
   padding: 10px;
 
@@ -12,15 +12,14 @@ const Container = styled.div`
   img {
     margin: 5px;
     border-radius: 8px;
-    height: 40%;
     background-color: var(--cinza-claro);
   }
   .item-nome-preco {
-    padding: 5px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    padding: 5px;
     align-items: center;
+    justify-content: space-between;
   }
   .item-descricao-botao {
     padding: 5px;
@@ -34,11 +33,9 @@ const Container = styled.div`
     }
   }
   .tag-preco {
-    width: 50px;
-    text-align: center;
     padding: 2px;
     border-radius: 5px;
-    background-color: var(--background-texto);
+
     color: var(--preto);
     font-weight: 900;
   }

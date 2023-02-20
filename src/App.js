@@ -1,7 +1,7 @@
 import Header from "./Components/Header";
 import GlobalStyle from "./GlobalStyles/globalStyles";
-import Card from "./Components/Cards";
 import Vitrine from "./Components/Vitrine";
+import Carrinho from "./Components/Carrinho";
 
 function App() {
   return (
@@ -9,6 +9,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Vitrine />
+      <Carrinho />
     </div>
   );
 }

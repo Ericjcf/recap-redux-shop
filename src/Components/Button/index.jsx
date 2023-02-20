@@ -1,8 +1,8 @@
 import Container from "./styles";
 
-const Button = ({ children, ...rest }) => {
+const Button = ({ children, tipo = "", ...rest }) => {
   return (
-    <Container type="button" {...rest}>
+    <Container tipo={tipo} type="button" {...rest}>
       {children}
     </Container>
   );
