@@ -2,14 +2,17 @@ import Header from "./Components/Header";
 import GlobalStyle from "./GlobalStyles/globalStyles";
 import Vitrine from "./Components/Vitrine";
 import Carrinho from "./Components/Carrinho";
-
+import MenuBar from "./Components/MenuBar";
+import Sidebar from "./Components/Drawer";
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      <Header />
+      {/* <Header />
       <Vitrine />
-      <Carrinho />
+      <Carrinho /> */}
+      <MenuBar />
+      <Sidebar />
     </div>
   );
 }
