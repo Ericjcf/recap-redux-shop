@@ -4,15 +4,20 @@ import Vitrine from "./Components/Vitrine";
 import Carrinho from "./Components/Carrinho";
 import MenuBar from "./Components/MenuBar";
 import Sidebar from "./Components/Drawer";
+import Sobre from "./Components/Sobre";
 function App() {
   return (
     <div className="App">
       <GlobalStyle />
-      {/* <Header />
-      <Vitrine />
-      <Carrinho /> */}
+      <Header />
+      <div className="principal-conteudo">
+        <Vitrine />
+        <Carrinho />
+      </div>
+
+      {/* <Sobre />
       <MenuBar />
-      <Sidebar />
+      <Sidebar /> */}
     </div>
   );
 }

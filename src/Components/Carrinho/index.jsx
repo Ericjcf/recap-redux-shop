@@ -16,19 +16,20 @@ const Carrinho = () => {
   return (
     <Container>
       <h1>Carrinho de compras</h1>
-
-      {itensCarrinho.map((item, index) => (
-        <CardCarrinho
-          key={index}
-          name={item.name}
-          preco={item.price}
-          image={item.image}
-          item={item}
-        />
-      ))}
+      <div className="secao-itens">
+        {itensCarrinho.map((item, index) => (
+          <CardCarrinho
+            key={index}
+            name={item.name}
+            preco={item.price}
+            image={item.image}
+            item={item}
+          />
+        ))}
+      </div>
       <hr />
       <div className="carrinho-subtotal">
-        <h1>Sutotal</h1>
+        <h1>Sutotal: </h1>
         <span>R$: {subTotal}</span>
       </div>
       <Button onClick={() => dispatch(thunkClearCart())} tipo="botao-finalizar">

@@ -13,14 +13,16 @@ const CardCarrinho = ({ name, preco, image, item }) => {
   }
   return (
     <Container>
-      <img src={image} />
       <div className="item-nome-preco">
-        <h4>{name}</h4>
-        <span className="tag-preco">R$ {preco}</span>
-        <Button tipo="botao-icone" onClick={() => handleRemoveCart()}>
-          remover do carrinho
-        </Button>
+        <img src={image} />
+        <div>
+          <h4>{name}</h4>
+          <span className="tag-preco">R$ {preco}</span>
+        </div>
       </div>
+      <Button tipo="botao-icone" onClick={() => handleRemoveCart()}>
+        remover do carrinho
+      </Button>
     </Container>
   );
 };

@@ -43,5 +43,9 @@ export default createGlobalStyle`
   li {
     list-style: none;
   }
-
+ .principal-conteudo{
+    display: flex;
+    flex-direction: row;
+ }
+ 
 `;
