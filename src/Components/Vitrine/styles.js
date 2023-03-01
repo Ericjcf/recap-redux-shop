@@ -4,7 +4,8 @@ const Container = styled.div`
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  margin-top: 30px;
+
+  margin: 50px;
   background-color: var(--background);
 `;
 export default Container;

@@ -12,7 +12,7 @@ function App() {
       <Header />
       <div className="principal-conteudo">
         <Vitrine />
-        <Carrinho />
+        {/* <Carrinho /> */}
       </div>
 
       {/* <Sobre />
@@ -29,4 +29,7 @@ Adicionar toast
 Ao clicar no adicionar, o contador de carrinho aumenta, e adiciona algo ao state
 Ao clicar no Carrinho troca de página, e consome o state de carrinho pra renderizar
 -- os produtos que estão lá
+Criar uma page de produtos
+Arrumar o modal de itens
+Melhorar a versão mobile
 */

@@ -15,7 +15,7 @@ const Carrinho = () => {
 
   return (
     <Container>
-      <h1>Carrinho de compras</h1>
+      <h2>Carrinho de compras</h2>
       <div className="secao-itens">
         {itensCarrinho.map((item, index) => (
           <CardCarrinho
@@ -28,13 +28,18 @@ const Carrinho = () => {
         ))}
       </div>
       <hr />
-      <div className="carrinho-subtotal">
-        <h1>Sutotal: </h1>
-        <span>R$: {subTotal}</span>
+      <div className="carrinho-footer">
+        <div className="carrinho-subtotal">
+          <h3>Sutotal: </h3>
+          <span>R$: {subTotal}</span>
+        </div>
+        <Button
+          onClick={() => dispatch(thunkClearCart())}
+          tipo="botao-finalizar"
+        >
+          Finalizar pedido
+        </Button>
       </div>
-      <Button onClick={() => dispatch(thunkClearCart())} tipo="botao-finalizar">
-        Finalizar pedido
-      </Button>
     </Container>
   );
 };

@@ -2,6 +2,7 @@ import Container from "./styles";
 import Button from "../Button";
 import { useDispatch, useSelector } from "react-redux";
 import { thunkRemoveCart } from "../../Store/Modules/Cart/thunks";
+import { FaTrashAlt } from "react-icons/fa";
 
 const CardCarrinho = ({ name, preco, image, item }) => {
   const itensCarrinho = useSelector((state) => state.cart);
@@ -19,10 +20,11 @@ const CardCarrinho = ({ name, preco, image, item }) => {
           <h4>{name}</h4>
           <span className="tag-preco">R$ {preco}</span>
         </div>
+        <FaTrashAlt onClick={() => handleRemoveCart()} />
       </div>
-      <Button tipo="botao-icone" onClick={() => handleRemoveCart()}>
+      {/* <Button tipo="botao-icone" onClick={() => handleRemoveCart()}>
         remover do carrinho
-      </Button>
+      </Button> */}
     </Container>
   );
 };

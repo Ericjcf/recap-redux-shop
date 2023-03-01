@@ -13,10 +13,9 @@ const Header = () => {
       <h1>
         James<span>Shop</span>
       </h1>
-      <div>
+      <div className="header-botoes">
         <p onClick={showSidebar}>Carrinho</p>
         {sidebar && <Sidebar active={setSidebar} />}
-        <hr></hr>
         <p>Entrar</p>
       </div>
     </Container>

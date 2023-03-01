@@ -16,7 +16,7 @@ const Card = ({ name, preco, image, item }) => {
     <Container>
       <img src={image} />
       <div className="item-nome-preco">
-        <h4>{name}</h4>
+        <h5>{name}</h5>
         <span className="tag-preco">R$ {preco}</span>
       </div>
       <div className="item-descricao-botao">

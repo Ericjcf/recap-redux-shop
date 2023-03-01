@@ -5,14 +5,9 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 30px;
-  width: 350px;
-  height: 100vh;
+  width: 330px;
+  height: 80vh;
   background-color: var(--background);
-
-  hr {
-    background-color: gray;
-    height: 1px;
-  }
 
   .secao-itens {
     overflow-y: auto;
@@ -23,7 +18,8 @@ const Container = styled.div`
   }
 
   .secao-itens::-webkit-scrollbar-track {
-    background: #6e6f72;
+    margin: 20px;
+    background: transparent;
     border-radius: 5px;
   }
 
@@ -31,15 +27,22 @@ const Container = styled.div`
     background-color: #3a86ff;
     border-radius: 3px;
   }
-
+  .carrinho-footer {
+    background-color: var(--background);
+    text-align: center;
+    position: relative;
+    right: 0;
+    bottom: 0;
+  }
   .carrinho-subtotal {
-    padding: 10px;
     display: flex;
+    width: 300px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 10px 0;
     span {
-      font-size: 30px;
+      font-size: 20px;
       font-weight: 900;
     }
   }

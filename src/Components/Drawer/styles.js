@@ -1,31 +1,19 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  /* right: ${(props) => (props.sidebar ? "0" : "-100%")}; */
+  /* aqui ele fala que quando o sidebar não estiver ativo ele regride em 100% e fica oculto 'atrás da tela */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
   background-color: var(--background);
-  position: fixed;
-  text-align: center;
-  padding: 10px;
-  height: 100%;
   top: 0px;
   right: 0px;
   width: 350px;
-  right: ${(props) => (props.sidebar ? "0" : "-100%")};
-  /* aqui ele fala que quando o sidebar não estiver ativo ele regride em 100% e fica oculto 'atrás da tela */
-  animation: showSidebar 2s;
-  > svg {
-    border-radius: 5px;
-    background-color: rgba(58, 134, 255, 0.8);
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: white;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-  }
-  h2 {
-    margin: 50px 0 10px 0;
-  }
+  height: 100vh;
+  justify-content: space-between;
+  padding: 10px;
+  animation: showSidebar 0.5s;
 
   @keyframes showSidebar {
     from {
@@ -37,17 +25,65 @@ export const Container = styled.div`
       width: 350px;
     }
   }
-`;
-export const Content = styled.div`
-  margin-top: 100px;
-  .carrinho-subtotal {
+  .carrinho-topo {
     display: flex;
-    margin: 10px;
     flex-direction: row;
     justify-content: space-between;
-    span {
-      font-size: 30px;
-      font-weight: 700;
+    margin: 10px;
+    svg {
+      background-color: #3a86ff;
+      color: white;
+      border-radius: 5px;
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  .carrinho-itens {
+    overflow-y: auto;
+  }
+  .carrinho-itens::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .carrinho-itens::-webkit-scrollbar-track {
+    margin: 20px;
+    background: transparent;
+    border-radius: 5px;
+  }
+
+  .carrinho-itens::-webkit-scrollbar-thumb {
+    background-color: #3a86ff;
+    border-radius: 3px;
+  }
+  .carrinho-subtotal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    div {
+      display: flex;
+      flex-direction: row;
+      width: 60%;
+      align-items: center;
+      justify-content: space-between;
+      margin: 10px;
     }
   }
 `;
+
+// .itens-lista {
+//   display: flex;
+//   flex-direction: column;
+// }
+// .carrinho-subtotal {
+//   display: flex;
+//   margin: 10px;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   span {
+//     font-size: 30px;
+//     font-weight: 700;
+//   }
+// }

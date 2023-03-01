@@ -28,10 +28,12 @@ const Sidebar = ({ active }) => {
 
   return (
     <Container sidebar={active}>
-      {/* <div className="carrinho-topo"></div> */}
-      <FaTimes onClick={closeSidebar} />
-      <h2>Carrinho de compras</h2>
-      <Content>
+      <div className="carrinho-topo">
+        <h2>Carrinho de compras</h2>
+        <FaTimes onClick={closeSidebar} />
+      </div>
+
+      <div className="carrinho-itens">
         {itensCarrinho.map((item, index) => (
           <CardCarrinho
             key={index}
@@ -41,8 +43,10 @@ const Sidebar = ({ active }) => {
             item={item}
           />
         ))}
-        <hr />
-        <div className="carrinho-subtotal">
+      </div>
+
+      <div className="carrinho-subtotal">
+        <div>
           <span>Subtotal</span>
           <span>R$: {subTotal}</span>
         </div>
@@ -52,7 +56,7 @@ const Sidebar = ({ active }) => {
         >
           Finalizar Pedido
         </Button>
-      </Content>
+      </div>
     </Container>
   );
 };
