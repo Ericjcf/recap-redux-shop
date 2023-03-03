@@ -10,7 +10,7 @@ const Container = styled.div`
   box-shadow: 0px 0px 4px 0px rgba(58, 134, 255, 0.8);
   img {
     margin: 5px;
-    border-radius: px;
+    border-radius: 5px;
     height: 40%;
     background-color: var(--cinza-claro);
   }
